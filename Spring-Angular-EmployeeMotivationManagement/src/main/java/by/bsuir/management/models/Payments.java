@@ -15,10 +15,10 @@ import javax.validation.constraints.NotNull;
 @DynamicUpdate
 public class Payments extends BaseEntity{
     @NotNull
-    @Column(name = "payments_name", length = 15)
+    @Column(name = "name", length = 15)
     private String paymentsName;
     @NotNull
-    @Column(name = "payments_amount", length = 15)
+    @Column(name = "amount", length = 15)
     private double paymentsAmount;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "type_payments_mot_id")

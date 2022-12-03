@@ -16,13 +16,13 @@ import java.util.Set;
 @DynamicUpdate
 public class TypesFinancialMotivation extends BaseEntity{
     @NotNull
-    @Column(name = "value", length = 15)
+    @Column(name = "name_fin_motivation", length = 15)
     private String nameFinMotivation;
     @NotNull
-    @Column(name = "value", length = 15)
+    @Column(name = "description_fin_motivation", length = 15)
     private String descriptionFinMotivation;
     @NotNull
-    @Column(name = "value", length = 15)
+    @Column(name = "who_can_get_fin_motivation", length = 15)
     private String whoCanGetFinMotivation;
     @OneToMany(mappedBy = "typesFinancialMotivation", fetch = FetchType.EAGER)
     private Set<MethodsOfMotivationInvolved> methodsOfMotivationInvolved;

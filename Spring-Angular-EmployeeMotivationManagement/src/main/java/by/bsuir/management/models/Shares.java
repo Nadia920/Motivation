@@ -21,7 +21,7 @@ public class Shares extends BaseEntity{
     @Column(name = "full_percent", length = 15)
     private double fullPercent;
     @NotNull
-    @Column(name = "remaining_number_of_percentages_of_shares", length = 15)
+    @Column(name = "remaining_number_of_percentaged_of_shares", length = 15)
     private double remainingNumberOfPercentagesOfShares;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "type_share_mot_id")

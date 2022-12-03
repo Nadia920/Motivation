@@ -30,10 +30,9 @@ public class MethodsOfMotivationInvolved extends BaseEntity{
     @JoinColumn(name = "who_control_id")
     private HRManagers hrManagers;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "types_nonfin_mot_id")
+    private TypesNonFinancialMotivation typesNonFinancialMotivation;
+    @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "types_fin_mot_id")
     private TypesFinancialMotivation typesFinancialMotivation;
-    @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    @JoinColumn(name = "types_non_fin_mot_id")
-    private TypesNonFinancialMotivation typesNonFinancialMotivation;
-
 }
