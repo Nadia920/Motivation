@@ -1,0 +1,20 @@
+<div case="*">
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="#{text.address}"></th>
+      <th text="#{text.totalCost}"></th>
+      <th text="#{text.companyPaymentPercentage}"></th>
+      <th text="#{text.termsOfProvision}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="apartment : ${apartments}">
+      <td text="${apartment.address}"></td>
+      <td text="${apartment.totalCost}"></td>
+      <td text="${apartment.companyPaymentPercentage}"></td>
+      <td text="${apartment.termsOfProvision}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

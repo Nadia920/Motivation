@@ -1,0 +1,22 @@
+<div>
+  <form action="/Admin/savePunishment" data ="${punishment}" method="post">
+    <div class="form-group col-md-8">
+      <label for="misconduct" class="col-form-label" text="Проступок"></label>
+      <input type="text" value="${punishment?.misconduct}" name="misconduct" class="form-control"
+             id="misconduct" placeholder="Проступок" autofocus required/>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="judgment" class="col-form-label" text="Наказание"></label>
+      <input type="text" value="${punishment?.after}" name="judgment" class="form-control"
+             id="judgment" placeholder="Наказание" autofocus required/>
+    </div>
+    <div class="form-group col-md-8">
+      <h2>Имя сотрудника</h2>
+      <select class="form-control col-lg-auto mb-3" id="select1" name="employee_id" required>
+        <optgroup each="employee : ${employees}">
+          <option value="${employee.id}" text="${employee.surname} + ${employee.firstname} + ${employee.patronymic}"></option>
+        </optgroup>
+      </select>
+    </div>
+  </form>
+</div>

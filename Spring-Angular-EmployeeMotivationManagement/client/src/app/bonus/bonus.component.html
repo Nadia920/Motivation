@@ -1,0 +1,18 @@
+<div case="*">
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="#{text.bonusName}"></th>
+      <th text="#{text.bonusDescription}"></th>
+      <th text="#{text.termsOfProvision}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="bonus : ${bonuses}">
+      <td text="${bonus.bonusName}"></td>
+      <td text="${bonus.bonusDescription}"></td>
+      <td text="${bonus.termsOfProvision}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

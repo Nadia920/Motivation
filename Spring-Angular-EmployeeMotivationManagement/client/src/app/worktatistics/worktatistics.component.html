@@ -1,0 +1,19 @@
+<div>
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="#{text.numberOfHoursWorked}"></th>
+      <th text="#{text.overtime}"></th>
+      <th text="#{text.numberOfClosedProjects}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="statistics : ${workStatistics}">
+      <td text="${statistics.Employees.surname} + ${statistics.Employees.firstName} + ${statistics.Employees.patronymic}"></td>
+      <td text="${statistics.numberOfHoursWorked}"></td>
+      <td text="${statistics.overtime}"></td>
+      <td text="${statistics.numberOfClosedProjects}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

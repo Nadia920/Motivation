@@ -1,0 +1,34 @@
+<div>
+  <form data-th-action="@{/Admin/saveEvent}" data-th-object="${event}" method="post">
+    <div class="form-group col-md-8">
+      <label for="eventName" class="col-form-label" text="Название мероприятия"></label>
+      <input type="text" value="${event?.eventName}" name="eventName" class="form-control"
+             id="eventName" placeholder="Название" autofocus required
+             pattern="([a-zA-Z])([a-zA-Z0-9]{3,13})" maxlength="14"/>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="descriptionOfTheEvent" class="col-form-label" text="Описание"></label>
+      <input type="text" value="${event?.descriptionOfTheEvent}" name="login" class="form-control"
+             id="descriptionOfTheEvent" placeholder="Описание" autofocus required/>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="dateOfTheEvent" class="col-form-label" text="Дата"></label>
+      <input type="text" value="${event?.dateOfTheEvent}" name="dateOfTheEvent" class="form-control"
+             id="dateOfTheEvent" laceholder="Дата" autofocus required />
+    </div>
+    <div class="form-group col-md-8">
+      <label for="programOfTheEvent" class="col-form-label" text="Программа"></label>
+      <input type="text" value="${event?.programOfTheEvent}" name="programOfTheEvent" class="form-control"
+             id="programOfTheEvent" placeholder="Программа" autofocus required/>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="budget" class="col-form-label" text="Бюджет"></label>
+      <input type="text" value="${event?.budget}" name="budget" class="form-control"
+             id="budget" placeholder="Бюджет" autofocus required/>
+    </div>
+    <div class="form-group col-md-8">
+      <input type="hidden" value="${event?.budget}" text="event" />
+    </div>
+    <button type="submit">Сохранить</button>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<div case="*">
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="Название"></th>
+      <th text="Описание"></th>
+      <th text="Дата"></th>
+      <th text="Программа"></th>
+      <th text="Бюджет"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="event : ${events}">
+      <td text="${event.eventName}"></td>
+      <td text="${event.descriptionOfTheEvent}"></td>
+      <td text="${event.dateOfTheEvent}"></td>
+      <td text="${event.programOfTheEvent}"></td>
+      <td text="${event.budget}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <button href="/Admin/addEvent">Добавить</button>
+</div>

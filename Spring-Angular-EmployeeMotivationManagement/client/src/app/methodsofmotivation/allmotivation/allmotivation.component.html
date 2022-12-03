@@ -1,0 +1,37 @@
+<div>
+  <button href="/Employee/menu">Назад</button>
+  <h3>Финансовые</h3>
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="Название мотивации"></th>
+      <th text="Описание мотивации"></th>
+      <th text="Кто может получить"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="type : ${typesFinancialMotivation}">
+      <a href="${type.nameOfMotivation}" >td text="${type.nameOfMotivation}"></td></a><
+      <td text="${type.descriptionOfFinMotivation}"></td>
+      <td text="${type.whoCanGetFinMotivation}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <h3>Не финансовые</h3>
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="#{text.name_of_motivation}"></th>
+      <th text="#{text.description_of_non_fin_motivation}"></th>
+      <th text="#{text.who_can_get_non_fin_motivation}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="type : ${typesNonFinancialMotivation}">
+      <td text="${type.nameOfNonMotivation}"></td>
+      <td text="${type.descriptionOfNonFinMotivation}"></td>
+      <td text="${type.whoCanGetNonFinMotivation}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

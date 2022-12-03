@@ -1,0 +1,18 @@
+<div case="*">
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="#{text.coinName}"></th>
+      <th text="#{text.amountCoinsAreIssued}"></th>
+      <th text="#{text.termsOfProvision}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="cryptocurrency : ${cryptocurrencies}">
+      <td text="${cryptocurrency.coinName}"></td>
+      <td text="${cryptocurrency.amountCoinsAreIssued}"></td>
+      <td text="${cryptocurrency.termsOfProvision}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

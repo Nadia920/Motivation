@@ -1,0 +1,22 @@
+<div>
+  <div case="*">
+    <table class="table table-hover" style="margin-left: -5px">
+      <thead>
+      <tr>
+        <th text="ФИО"></th>
+        <th text="Дата рождения"></th>
+        <th text="Должность"></th>
+        <th text="Обязанности"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr each="hrManager : ${hrManagers}">
+        <td text="${hrManager.HRSurname} + ${hrManager.HRFirstname} + ${hrManager.HRPatronymic}"></td>
+        <td text="${hrManager.HRDateOfBirth}"></td>
+        <td text="${hrManager.HRPosition}"></td>
+        <td text="${hrManager.HRResponsibilities}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

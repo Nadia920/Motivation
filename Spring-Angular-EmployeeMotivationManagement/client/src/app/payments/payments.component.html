@@ -1,0 +1,16 @@
+<div case="*">
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th text="#{text.namePayments}"></th>
+      <th text="#{text.amount}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr each="payment : ${payments}">
+      <td text="${payment.name}"></td>
+      <td text="${payment.amount}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

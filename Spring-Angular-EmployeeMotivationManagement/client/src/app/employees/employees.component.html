@@ -1,0 +1,24 @@
+<div>
+  <div case="*">
+    <table class="table table-hover" style="margin-left: -5px">
+      <thead>
+      <tr>
+        <th text="ФИО"></th>
+        <th text="Дата рождения"></th>
+        <th text="Должность"></th>
+        <th text="Обязанности"></th>
+        <th text="Количество очков"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr each="employee : ${employees}">
+        <td text="${employee.surname} + ${employee.firstname} + ${employee.patronymic}"></td>
+        <td text="${employee.dateOfBirth}"></td>
+        <td text="${employee.position}"></td>
+        <td text="${employee.responsibilities}"></td>
+        <td text="${employee.numberOfPoints}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
