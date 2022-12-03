@@ -40,7 +40,7 @@ public class EmployeesServiceImpl implements EmployeesService {
         }
 
         Employees employees = new Employees();
-        employees.setLastName(obj.getLastName());
+        employees.setSurname(obj.getSurname());
         employees.setFirstName(obj.getFirstName());
         employees.setPatronymic(obj.getPatronymic());
         employees.setDateOfBirth(obj.getDateOfBirth());

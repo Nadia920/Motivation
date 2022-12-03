@@ -16,9 +16,9 @@ public class CryptocurrencyServiceImpl implements CryptocurrencyService {
         return cryptocurrencyRepository.findById(id).get();
     }
 
-
     @Override
-    public List<Cryptocurrency> findALL() {
+    public List<Cryptocurrency> findAll() {
         return (cryptocurrencyRepository.findAll());
     }
+
 }

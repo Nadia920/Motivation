@@ -16,9 +16,9 @@ public class ApartmentsServiceImpl implements ApartmentsService {
         return apartmentsRepository.findById(id).get();
     }
 
-
     @Override
-    public List<Apartments> findALL() {
+    public List<Apartments> findAll() {
         return (apartmentsRepository.findAll());
     }
+
 }

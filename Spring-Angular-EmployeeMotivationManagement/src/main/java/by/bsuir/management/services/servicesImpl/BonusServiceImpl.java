@@ -16,9 +16,8 @@ public class BonusServiceImpl implements BonusService {
         return bonusRepository.findById(id).get();
     }
 
-
     @Override
-    public List<Bonus> findALL() {
+    public List<Bonus> findAll() {
         return (bonusRepository.findAll());
     }
 }
