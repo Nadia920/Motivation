@@ -1,6 +1,6 @@
 package by.bsuir.management.services;
 
-import by.bsuir.management.models.Employees;
+import by.bsuir.management.models.Employee;
 import by.bsuir.management.models.RoleEntity;
 
 import java.util.List;
@@ -12,6 +12,6 @@ public interface RoleService {
 
     RoleEntity findByRole(String role);
 
-    List<Employees> getUsersByRole(String role);
+    List<Employee> getUsersByRole(String role);
 }
 

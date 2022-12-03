@@ -25,7 +25,7 @@ public class Bonus extends BaseEntity{
     private String termsOfProvision;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "bonus_mot_id")
-    private TypesFinancialMotivation typesFinancialMotivation;
+    private TypeFinancialMotivation typeFinancialMotivation;
 
 }
 

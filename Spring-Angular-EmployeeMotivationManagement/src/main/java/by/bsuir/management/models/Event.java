@@ -32,5 +32,5 @@ public class Event extends BaseEntity{
     private String budget;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "type_event_mot_id")
-    private TypesFinancialMotivation typesFinancialMotivation;
+    private TypeFinancialMotivation typeFinancialMotivation;
 }

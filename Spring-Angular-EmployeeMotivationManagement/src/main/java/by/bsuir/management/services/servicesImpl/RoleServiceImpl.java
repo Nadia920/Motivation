@@ -1,6 +1,6 @@
 package by.bsuir.management.services.servicesImpl;
 
-import by.bsuir.management.models.Employees;
+import by.bsuir.management.models.Employee;
 import by.bsuir.management.models.RoleEntity;
 import by.bsuir.management.repository.RoleRepository;
 import by.bsuir.management.services.RoleService;
@@ -29,9 +29,9 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public List<Employees> getUsersByRole(String role) {
+    public List<Employee> getUsersByRole(String role) {
         RoleEntity roleEntity = roleRepository.findByRole(role);
-        List<Employees> employees = roleEntity.getEmployees();
+        List<Employee> employees = roleEntity.getEmployees();
         return employees;
     }
 }

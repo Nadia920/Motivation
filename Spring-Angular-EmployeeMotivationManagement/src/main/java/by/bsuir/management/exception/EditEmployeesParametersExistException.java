@@ -1,13 +1,13 @@
 package by.bsuir.management.exception;
 
-import by.bsuir.management.models.Employees;
+import by.bsuir.management.models.Employee;
 
 public class EditEmployeesParametersExistException extends RuntimeException {
 
-    Employees employees;
+    Employee employee;
 
-    public EditEmployeesParametersExistException(String message, Employees employees) {
+    public EditEmployeesParametersExistException(String message, Employee employee) {
         super(message);
-        this.employees = employees;
+        this.employee = employee;
     }
 }

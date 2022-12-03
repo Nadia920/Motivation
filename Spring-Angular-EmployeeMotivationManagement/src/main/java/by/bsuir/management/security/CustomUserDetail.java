@@ -1,6 +1,6 @@
 package by.bsuir.management.security;
 
-import by.bsuir.management.models.Employees;
+import by.bsuir.management.models.Employee;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,8 +8,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
-public class CustomUserDetail extends Employees implements UserDetails {
-    public CustomUserDetail(final Employees employee) {
+public class CustomUserDetail extends Employee implements UserDetails {
+    public CustomUserDetail(final Employee employee) {
         super(employee);
     }
 
@@ -25,10 +25,6 @@ public class CustomUserDetail extends Employees implements UserDetails {
 
     public boolean isClient() {
         return getRoleEntity().getRole().equals("ROLE_CLIENT");
-    }
-
-    public boolean isWorker() {
-        return getRoleEntity().getRole().equals("ROLE_WORKER");
     }
 
     @Override

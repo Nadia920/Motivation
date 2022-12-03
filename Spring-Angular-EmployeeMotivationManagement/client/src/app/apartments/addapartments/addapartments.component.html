@@ -4,25 +4,25 @@
     <div class="form-group col-md-8">
       <label for="address" class="col-form-label" text="Адрес"></label>
       <input type="text"  name="address" class="form-control"
-             id="address" placeholder="Адрес" [(ngModel)]="apartments.address" autofocus required/>
+             id="address" placeholder="Адрес" [(ngModel)]="apartment.address" autofocus required/>
     </div>
     <div class="form-group col-md-8">
       <label for="totalCost" class="col-form-label" text="Полная стоимость"></label>
       <input type="text"  name="totalCost" class="form-control"
-             id="totalCost" [(ngModel)]="apartments.totalCost" autofocus required/>
+             id="totalCost" [(ngModel)]="apartment.totalCost" autofocus required/>
     </div>
     <div class="form-group col-md-8">
       <label for="companyPaymentPercentage" class="col-form-label" text="Сколько оплачивает компания"></label>
       <input type="text"  name="companyPaymentPercentage" class="form-control"
-             id="companyPaymentPercentage" [(ngModel)]="apartments.companyPaymentPercentage" autofocus required/>
+             id="companyPaymentPercentage" [(ngModel)]="apartment.companyPaymentPercentage" autofocus required/>
     </div>
     <div class="form-group col-md-8">
       <label for="termsOfProvision" class="col-form-label" text="Условия предоставления"></label>
       <input type="text"  name="termsOfProvision" class="form-control"
-             id="termsOfProvision" placeholder="Адрес" [(ngModel)]="apartments.termsOfProvision" autofocus required/>
+             id="termsOfProvision" placeholder="Адрес" [(ngModel)]="apartment.termsOfProvision" autofocus required/>
     </div>
     <div class="form-group col-md-8">
-      <input type="hidden" class="form-control" [(ngModel)]="apartments.typeApartMotId" value="apartments" autofocus required/>
+      <input type="hidden" class="form-control" [(ngModel)]="apartment.typeApartMotId" value="apartment" autofocus required/>
     </div>
   </form>
 </div>

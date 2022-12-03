@@ -4,9 +4,11 @@ import by.bsuir.management.models.Cryptocurrency;
 import by.bsuir.management.repository.CryptocurrencyRepository;
 import by.bsuir.management.services.CryptocurrencyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CryptocurrencyServiceImpl implements CryptocurrencyService {
     @Autowired
     CryptocurrencyRepository cryptocurrencyRepository;

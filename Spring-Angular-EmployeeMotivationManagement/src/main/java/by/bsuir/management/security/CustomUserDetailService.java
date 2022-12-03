@@ -1,7 +1,7 @@
 package by.bsuir.management.security;
 
-import by.bsuir.management.models.Employees;
-import by.bsuir.management.services.EmployeesService;
+import by.bsuir.management.models.Employee;
+import by.bsuir.management.services.EmployeeService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -12,15 +12,15 @@ import java.util.Optional;
 @Component
 public class CustomUserDetailService implements UserDetailsService {
 
-    private final EmployeesService employeesService;
+    private final EmployeeService employeeService;
 
-    public CustomUserDetailService(EmployeesService employeesService) {
-        this.employeesService = employeesService;
+    public CustomUserDetailService(EmployeeService employeeService) {
+        this.employeeService = employeeService;
     }
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        Optional<Employees> optionalUser = employeesService.findByLogin(login);
+        Optional<Employee> optionalUser = employeeService.findByLogin(login);
 
         optionalUser
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found"));

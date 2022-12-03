@@ -1,11 +1,10 @@
 package by.bsuir.management.controller;
 
-import by.bsuir.management.models.Employees;
-import by.bsuir.management.services.EmployeesService;
+import by.bsuir.management.models.Employee;
+import by.bsuir.management.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -16,13 +15,13 @@ import javax.validation.Valid;
 @RestController
 public class HomeController {
     @Autowired
-    private EmployeesService employeesService;
+    private EmployeeService employeeService;
 
     public HomeController() {
     }
 
-    public HomeController(EmployeesService employeesService) {
-        this.employeesService = employeesService;
+    public HomeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
     }
 
     @GetMapping(value = "/home")
@@ -45,17 +44,17 @@ public class HomeController {
 
     @GetMapping("/registration")
     public String getSignUpView(Model model) {
-        model.addAttribute("user", new Employees());
+        model.addAttribute("user", new Employee());
         return "registration";
     }
 
     @PostMapping(path = "/registration")
-    public String registrationClient(@Valid @ModelAttribute("user") Employees client,
+    public String registrationClient(@Valid @ModelAttribute("user") Employee client,
                                      BindingResult result,
                                      Model model) {
         try {
-            employeesService.save(client, "ROLE_USER");
-            Employees user = new Employees();
+            employeeService.save(client, "ROLE_USER");
+            Employee user = new Employee();
             return "redirect:/";
         } catch (Exception e) {
             model.addAttribute("user", client);

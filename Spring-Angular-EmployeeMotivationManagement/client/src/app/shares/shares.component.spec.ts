@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharesComponent } from './shares.component';
+import { SharesComponent } from './share.component';
 
 describe('SharesComponent', () => {
   let component: SharesComponent;

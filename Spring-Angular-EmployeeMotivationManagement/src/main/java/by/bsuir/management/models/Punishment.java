@@ -22,5 +22,5 @@ public class Punishment extends BaseEntity{
     private int judgment;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id")
-    private Employees employees;
+    private Employee employee;
 }

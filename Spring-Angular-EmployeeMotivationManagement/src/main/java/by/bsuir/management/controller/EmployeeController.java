@@ -6,7 +6,6 @@ import by.bsuir.management.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,31 +20,31 @@ public class EmployeeController {
     @Autowired
     private PromotionService promotionService;
     @Autowired
-    private EmployeesService employeesService;
+    private EmployeeService employeeService;
     @Autowired
-    private WorkStatisticsService workStatisticsService;
+    private WorkStatisticService workStatisticService;
     @Autowired
-    private TypesFinancialMotivationService typesFinancialMotivationService;
+    private TypeFinancialMotivationService typeFinancialMotivationService;
     @Autowired
-    private TypesNonFinancialMotivationService typesNonFinancialMotivationService;
+    private TypeNonFinancialMotivationService typeNonFinancialMotivationService;
     @Autowired
-    private MethodsOfMotivationInvolvedService methodsOfMotivationInvolvedService;
+    private MethodOfMotivationInvolvedService methodOfMotivationInvolvedService;
     @PreAuthorize("hasAnyRole('CLIENT')")
     @GetMapping("/showYourMotivation")
     public List showYourBonuses(@AuthenticationPrincipal CustomUserDetail currUser, Model model){
-        return (List) methodsOfMotivationInvolvedService.getMethodsByEmployeeId(currUser.getId());
+        return (List) methodOfMotivationInvolvedService.getMethodsByEmployeeId(currUser.getId());
     }
     @GetMapping("/allMotivations")
     public String allBonuses(Model model){
-        List<TypesFinancialMotivation> typesFinancialMotivationList = typesFinancialMotivationService.findALL();
-        model.addAttribute("typesFinancialMotivation", typesFinancialMotivationList.size() != 0 ? typesFinancialMotivationList : null);
-        List<TypesNonFinancialMotivation> typesNonFinancialMotivationList = typesNonFinancialMotivationService.findALL();
-        model.addAttribute("typesNonFinancialMotivation", typesNonFinancialMotivationList.size() != 0 ? typesNonFinancialMotivationList : null);
+        List<TypeFinancialMotivation> typeFinancialMotivationList = typeFinancialMotivationService.findALL();
+        model.addAttribute("typesFinancialMotivation", typeFinancialMotivationList.size() != 0 ? typeFinancialMotivationList : null);
+        List<TypeNonFinancialMotivation> typeNonFinancialMotivationList = typeNonFinancialMotivationService.findALL();
+        model.addAttribute("typesNonFinancialMotivation", typeNonFinancialMotivationList.size() != 0 ? typeNonFinancialMotivationList : null);
         return "/motivation/allMotivations";
     }
     @GetMapping("/yourWorkStatistics")
     public Object yourWorkStatistics(@AuthenticationPrincipal CustomUserDetail currUser, Model model){
-        return workStatisticsService.getWorkStatisticsByEmployeeId(currUser.getId());
+        return workStatisticService.getWorkStatisticsByEmployeeId(currUser.getId());
     }
     @GetMapping("/workingDay")
     public String showYourBonuses(Model model){
@@ -56,7 +55,7 @@ public class EmployeeController {
     public String careerLadder(@AuthenticationPrincipal CustomUserDetail currUser, Model model){
         List<Promotion> promotion = promotionService.findAll();
         model.addAttribute("promotion", promotion);
-        int number = employeesService.findNumberOfPointsById(currUser.getId());
+        int number = employeeService.findNumberOfPointsById(currUser.getId());
         model.addAttribute("number", number);
         return "analysis/careerLadder";
     }

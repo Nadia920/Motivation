@@ -13,7 +13,7 @@
     <div class="form-group col-md-8">
       <h2>Имя сотрудника</h2>
       <select class="form-control col-lg-auto mb-3" id="select1" name="employee_id" required>
-        <optgroup each="employee : ${employees}">
+        <optgroup each="employee : ${employee}">
           <option value="${employee.id}" text="${employee.surname} + ${employee.firstname} + ${employee.patronymic}"></option>
         </optgroup>
       </select>

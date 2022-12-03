@@ -10,7 +10,7 @@ server:
 spring:
   jpa:
     database: POSTGRESQL
-    show-sql: false
+    show-sql: true
     hibernate:
     #ddl-auto: validate
     #create-drop
@@ -36,13 +36,6 @@ spring:
     database: POSTGRESQL
   database:
     driverClassName: org.postgresql.Driver
----
-#Thymeleaf
-spring:
-  thymeleaf:
-    mode: HTML5
-    cache: false
-
 ---
 #Log4j
 

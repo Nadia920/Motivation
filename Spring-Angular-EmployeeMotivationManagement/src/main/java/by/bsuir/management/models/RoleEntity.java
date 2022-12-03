@@ -21,7 +21,7 @@ public class RoleEntity extends BaseEntity{
     String role;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "roleEntity")
-    List<Employees> employees;
+    List<Employee> employees;
 
 
 }

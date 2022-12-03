@@ -4,119 +4,129 @@ import by.bsuir.management.models.*;
 import by.bsuir.management.services.*;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/Admin")
+
 @RestController
 @AllArgsConstructor
+@RequestMapping({"/Admin"})
 public class AdminController {
 
     @Autowired
-    private TypesFinancialMotivationService typesFinancialMotivationService;
+    private TypeFinancialMotivationService typeFinancialMotivationService;
     @Autowired
-    private TypesNonFinancialMotivationService typesNonFinancialMotivationService;
+    private TypeNonFinancialMotivationService typeNonFinancialMotivationService;
     @Autowired
     private EventService eventService;
     @Autowired
-    private WorkStatisticsService workStatisticsService;
+    private WorkStatisticService workStatisticService;
     @Autowired
-    private MethodsOfMotivationInvolvedService methodsOfMotivationInvolvedService;
+    private MethodOfMotivationInvolvedService methodOfMotivationInvolvedService;
     @Autowired
     private PunishmentService punishmentService;
     @Autowired
-    private ApartmentsService apartmentsService;
+    private ApartmentService apartmentService;
     @Autowired
     private CryptocurrencyService cryptocurrencyService;
     @Autowired
     private BonusService bonusService;
     @Autowired
-    private PaymentsService paymentsService;
+    private PaymentService paymentService;
     @Autowired
-    private EmployeesService employeesService;
+    private EmployeeService employeeService;
     @Autowired
-    private HRManagersService hrManagersService;
+    private HRManagerService hrManagerService;
     @Autowired
-    private SharesService sharesService;
+    private ShareService shareService;
 
-    @GetMapping("finMotivation")
+    @GetMapping(path = {"/finMotivation"})
     public List finMotivation(Model model){
-        return (List) typesFinancialMotivationService.findALL();
+        return (List) typeFinancialMotivationService.findALL();
     }
-    @GetMapping("non-finMotivation")
+
+    @GetMapping(path = {"/non-finMotivation"})
     public List nonFinMotivation(Model model){
-        return (List) typesNonFinancialMotivationService.findALL();
+        return (List) typeNonFinancialMotivationService.findALL();
     }
-    @GetMapping("event")
+
+    @GetMapping(path = {"/event"})
     public List allEvent(Model model){
         return (List) eventService.findAll();
     }
-    @GetMapping("employeePerformanceAnalysis")
+
+    @GetMapping(path = {"/employeePerformanceAnalysis"})
     public List employeePerformanceAnalysis(Model model){
-        return (List) workStatisticsService.findAll();
+        return (List) workStatisticService.findAll();
     }
-    @GetMapping("methodsMotivation")
+
+    @GetMapping(path = {"/methodsMotivation"})
     public List methodsMotivation(Model model){
-        return (List)  methodsOfMotivationInvolvedService.findAll();
+        return (List)  methodOfMotivationInvolvedService.findAll();
     }
-    @GetMapping("punishment")
+
+    @GetMapping(path = {"/punishment"})
     public List punishment(Model model){
         return (List) punishmentService.findAll();
 
     }
-    @GetMapping("apartments")
+
+    @GetMapping(path = {"/apartments"})
     public List apartments(Model model){
-        return (List) apartmentsService.findAll();
+        return (List) apartmentService.findAll();
 
     }
-    @GetMapping("cryptocurrency")
+
+    @GetMapping(path = {"/cryptocurrency"})
     public List cryptocurrency(Model model){
         return (List) cryptocurrencyService.findAll();
     }
-    @GetMapping("bonus")
+
+    @GetMapping(path = {"/bonus"})
     public List bonus(Model model){
         return (List) bonusService.findAll();
     }
-    @GetMapping("payments")
+
+    @GetMapping(path = {"/payments"})
     public List payments(Model model){
-        return (List) paymentsService.findAll();
+        return (List) paymentService.findAll();
     }
-    @GetMapping("shares")
+
+    @GetMapping(path = {"/shares"})
     public List shares(Model model){
-        return (List) sharesService.findAll();
+        return (List) shareService.findAll();
     }
-    @GetMapping("/event")
+
+    @GetMapping(path = {"/event"})
     public List event(Model model){
         return (List) eventService.findAll();
     }
-    @GetMapping("/addEvent")
+
+    @GetMapping(path = {"/addEvent"})
     public String addEvent(Model model) {
         return "/addEvent";
     }
-    @PostMapping("/saveMethods")
-    public void saveEvent(Event obj, Model model){
+    @PostMapping(path = {"/saveMethods"})
+    public void saveEvent(@RequestBody Event obj, Model model){
         eventService.save(obj);
     }
-    @GetMapping("/addMethodsOfMotivation")
+
+    @GetMapping(path = {"/addMethodsOfMotivation"})
     public String addMethodsOfMotivation(Model model){
-        List<Employees> employessList = employeesService.findAll();
+        List<Employee> employessList = employeeService.findAll();
         model.addAttribute("employes", employessList.size() != 0 ? employessList : null);
-        List<HRManagers> hrManagersList = hrManagersService.findAll();
-        model.addAttribute("hrManagers", hrManagersList.size() != 0 ? hrManagersList : null);
-        List<TypesFinancialMotivation> typesFinancialMotivationList = typesFinancialMotivationService.findALL();
-        model.addAttribute("typesFinancialMotivation", typesFinancialMotivationList.size() != 0 ? typesFinancialMotivationList : null);
-        List<TypesNonFinancialMotivation> typesNonFinancialMotivationList = typesNonFinancialMotivationService.findALL();
-        model.addAttribute("typesFinancialMotivation", typesNonFinancialMotivationList.size() != 0 ? typesNonFinancialMotivationList : null);
+        List<HRManager> hrManagerList = hrManagerService.findAll();
+        model.addAttribute("hrManagers", hrManagerList.size() != 0 ? hrManagerList : null);
+        List<TypeFinancialMotivation> typeFinancialMotivationList = typeFinancialMotivationService.findALL();
+        model.addAttribute("typesFinancialMotivation", typeFinancialMotivationList.size() != 0 ? typeFinancialMotivationList : null);
+        List<TypeNonFinancialMotivation> typeNonFinancialMotivationList = typeNonFinancialMotivationService.findALL();
+        model.addAttribute("typesFinancialMotivation", typeNonFinancialMotivationList.size() != 0 ? typeNonFinancialMotivationList : null);
         return "/addMethodsOfMotivation";
     }
-    @PostMapping("/saveMethods")
-    public void saveMethods(MethodsOfMotivationInvolved obj, Model model) {
-        methodsOfMotivationInvolvedService.save(obj);
+    @PostMapping(path = {"/saveMethods"})
+    public void saveMethods(@RequestBody MethodOfMotivationInvolved obj, Model model) {
+        methodOfMotivationInvolvedService.save(obj);
     }
 }
