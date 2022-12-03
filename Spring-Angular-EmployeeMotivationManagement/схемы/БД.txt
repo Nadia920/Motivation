@@ -1,0 +1,179 @@
+CREATE DATABASE motivation;
+create table promotion
+(
+ id SERIAL not null primary key, 
+ title_of_the_position varchar(30) not null,
+ number_of_points_required double precision not null
+);
+create table app_role
+(
+ id SERIAL not null primary key,
+ role varchar(12)
+);
+create table employees
+(
+ id SERIAL not null primary key,
+ surname varchar(30) not null,
+ first_name varchar(20) not null,
+ patronymic varchar(30),
+ date_of_birth date not null,
+ position varchar(15),
+ responsibilities varchar(100),
+ number_of_points double precision, 
+ login varchar(15) not null,
+ password varchar(15) not null,
+ email varchar(15) not null,
+ role_id bigint not null
+ constraint employees_app_role
+ references app_role(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table work_statistics
+(
+ id SERIAL not null primary key,
+ number_of_hours_worked double precision not null,
+ overtime double precision not null,
+ number_of_closed_project int,
+ employee_id bigint
+ constraint work_statistics_employees
+ references employees(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table punishment
+(
+ id SERIAL not null primary key,
+ misconduct varchar(30) not null,
+ judgment varchar(50) not null,
+ employee_id bigint
+ constraint punishment_employees
+ references employees(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table hr_managers
+(
+ id SERIAL not null primary key,
+ HR_surname varchar(30) not null,
+ HR_first_name varchar(20) not null,
+ HR_patronymic varchar(30),
+ HR_date_of_birth date not null,
+ HR_position varchar(15),
+ HR_responsibilities varchar(100)
+);
+create table types_nonfin_motivation
+(
+ id SERIAL not null primary key,
+ name_nonfin_motivation varchar(30) not null,
+ description_nonfin_motivation varchar(100) not null,
+ who_can_get_nonfin_motivation varchar(30) not null
+);
+create table types_financial_motivation
+(
+ id SERIAL not null primary key,
+ name_fin_motivation varchar(30) not null,
+ description_fin_motivation varchar(20) not null,
+ who_can_get_fin_motivation varchar(30)
+);
+create table apartments
+(
+ id SERIAL not null primary key,
+ address varchar(30) not null,
+ total_cost double precision not null,
+ company_payment_percentage double precision,
+ terms_of_provision varchar(30),
+ type_apart_mot_id bigint
+ constraint apartments_types_financial_motivation
+ references types_financial_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table cryptocurrency
+(
+ id SERIAL not null primary key,
+ coin_name varchar(30) not null,
+ amount_coins_are_issued double precision not null,
+ terms_of_provision varchar(30),
+ type_cryp_mot_id bigint
+ constraint cryptocurrency_types_financial_motivation
+ references types_financial_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table bonus
+(
+ id SERIAL not null primary key,
+ bonus_name varchar(30) not null,
+ bonus_description varchar(50) not null,
+ terms_of_provision varchar(30),
+ type_bonus_mot_id bigint
+ constraint bonus_types_financial_motivation
+ references types_financial_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table payments
+(
+ id SERIAL not null primary key,
+ name varchar(30) not null,
+ amount double precision not null,
+ type_payments_mot_id bigint
+ constraint payments_types_financial_motivation
+ references types_financial_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table shares
+(
+ id SERIAL not null primary key,
+ company_name varchar(30) not null,
+ full_percent double precision not null,
+ remaining_number_of_percentaged_of_shares double precision not null,
+ type_share_mot_id bigint
+ constraint shares_types_financial_motivation
+ references types_financial_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table event
+(
+ id SERIAL not null primary key,
+ event_name varchar(30) not null,
+ description_of_the_event varchar(100) not null,
+ date_of_the_event date not null,
+ program_of_the_event varchar(200) not null,
+ budget double precision not null,
+ type_event_mot_id bigint
+ constraint event_types_financial_motivation
+ references types_financial_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
+create table methods_of_motivation_involved
+(
+ id SERIAL not null primary key,
+ before varchar(50) not null,
+ after varchar(50) not null,
+ date_of_recieving date not null,
+ employee_id bigint
+ constraint methods_employees
+ references employees(id)
+ ON DELETE CASCADE
+ ON update CASCADE,
+ who_control_id bigint
+ constraint methods_hr_managers
+ references hr_managers(id)
+ ON DELETE CASCADE
+ ON update CASCADE,
+ types_nonfin_mot_id bigint
+ constraint methods_types_nonfinancial_motivation
+ references types_nonfin_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE,
+ types_fin_mot_id bigint
+ constraint methods_types_financial_motivation
+ references types_financial_motivation(id)
+ ON DELETE CASCADE
+ ON update CASCADE
+);
