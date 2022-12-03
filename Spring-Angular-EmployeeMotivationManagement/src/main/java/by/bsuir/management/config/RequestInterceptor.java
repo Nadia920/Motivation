@@ -1,4 +1,4 @@
-package by.bsuir.management.config;
+/*package by.bsuir.management.config;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,5 +20,5 @@ public class RequestInterceptor extends HandlerInterceptorAdapter {
             throws Exception {
         LOGGER.info("Request URL:{}",request.getRequestURL());
     }
-}
+}*/
 

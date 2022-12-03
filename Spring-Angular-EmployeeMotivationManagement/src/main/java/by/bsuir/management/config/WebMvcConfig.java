@@ -1,4 +1,4 @@
-package by.bsuir.management.config;
+/*package by.bsuir.management.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -27,4 +27,4 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(requestInterceptor);
     }
-}
+}*/
