@@ -22,13 +22,13 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     Employee findByLogin(String login);
 
-    @Query(value = "SELECT e.id FROM Employees e WHERE e.login = ?1")
+    @Query(value = "SELECT e.id FROM Employee e WHERE e.login = ?1")
     Long getIdEmployeesByLogin(String login);
 
-    @Query(value = "SELECT e.id FROM Employees e WHERE e.email = ?1")
+    @Query(value = "SELECT e.id FROM Employee e WHERE e.email = ?1")
     Long getIdEmployeesByEmail(String email);
 
 
-    @Query(value = "SELECT e.numberOfPoints FROM Employees e WHERE e.id = ?1")
+    @Query(value = "SELECT e.numberOfPoints FROM Employee e WHERE e.id = ?1")
     int findNumberOfPointsById(Long id);
 }

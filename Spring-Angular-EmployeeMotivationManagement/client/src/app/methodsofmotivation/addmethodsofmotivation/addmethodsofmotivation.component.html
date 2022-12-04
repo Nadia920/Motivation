@@ -1,17 +1,15 @@
-<div>
-  <h2>Введите информацию о методе</h2>
-  <form action="/Admin/addMethodsOfMotivation" data-th-object="${methodsOfMotivation}" method="post">
+<div class="col-md-6">
+  <h2 class="text-center">Введите информацию о методе</h2>
+  <form>
     <div class="form-group col-md-8">
-      <label for="before" class="col-form-label" text="#{text.before}"></label>
-      <input type="text" value="${employee?.before}" name="before" class="form-control"
-             id="before" placeholder="#{text.before}" autofocus required
-             pattern="([a-zA-Z])([a-zA-Z0-9]{3,13})" maxlength="14"/>
+      <label for="before" class="col-form-label">До</label>
+      <input type="text" [(ngModel)]="methodOfMotivationInvolved.before" name="before" class="form-control"
+             id="before" placeholder="До" autofocus required/>
     </div>
     <div class="form-group col-md-8">
-      <label for="after" class="col-form-label" text="#{text.after}"></label>
-      <input type="text" value="${employee?.after}" name="after" class="form-control"
-             id="after" placeholder="#{text.after}" autofocus required
-             pattern="([a-zA-Z])([a-zA-Z0-9]{3,13})" maxlength="14"/>
+      <label for="after" class="col-form-label">После</label>
+      <input type="text" [(ngModel)]="methodOfMotivationInvolved.after" name="after" class="form-control"
+             id="after" placeholder="После" autofocus required/>
     </div>
     <div class="form-group col-md-8">
       <h2>Имя сотрудника</h2>
@@ -44,9 +42,9 @@
     </div>
     <div class="form-group col-md-8">
       <label for="dateOfRecieving" class="col-form-label" text="#{text.after}"></label>
-      <input type="date" value="${employee?.after}" name="dateOfRecieving" class="form-control"
+      <input type="date" [(ngModel)]="methodOfMotivationInvolved.dateOfRecieving" name="dateOfRecieving" class="form-control"
              id="dateOfRecieving" placeholder="Дата предоставления" autofocus required/>
     </div>
-    <button href="/Admin/saveMethods" type="submit">Сохранить</button>
+    <button class="btn btn-success" (click)="createMethodOfMotivation()">Добавить</button>
   </form>
 </div>

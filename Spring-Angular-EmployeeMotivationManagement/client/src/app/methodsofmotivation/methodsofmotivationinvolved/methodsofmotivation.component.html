@@ -1,25 +1,28 @@
-<div>
-  <table class="table table-hover" style="margin-left: -5px">
+<div class="col-md-6">
+  <table class="table table-striped" style="margin-left: -5px">
     <thead>
     <tr>
-      <th text="До"></th>
-      <th text="После"></th>
-      <th text="Сотрудник"></th>
-      <th text="Предоставил"></th>
-      <th text="Тип финансовой мотивации"></th>
-      <th text="Тип не финансовой мотивации"></th>
-      <th text="Дата предоставления"></th>
+      <th class="hidden">Id</th>
+      <th>До</th>
+      <th>После</th>
+      <th>Сотрудник</th>
+      <th>Предоставил</th>
+      <th>Тип финансовой мотивации</th>
+      <th>Тип не финансовой мотивации</th>
+      <th>Дата предоставления</th>
     </tr>
     </thead>
     <tbody>
-    <tr each= motivation : {{motivations}}}>
-      <td text= {{motivation.before}}></td>
-      <td text={{methodOfMotivation.after}}></td>
-      <td text={{methodOfMotivation.Employees.surname}} + {{methodOfMotivation.Employees.firstname}} + {{methodOfMotivation.Employees.patronymic}}></td>
-      <td text={{methodOfMotivation.HRManagers.HRSurname}} + ${methodOfMotivation.HRManagers.HRFirstName}} + ${methodOfMotivation.HRManagers.HRPatronymic}}></td>
-      <td text={{methodOfMotivation.TypesFinancialMotivation.nameFinMotivation}}></td>
-      <td text={{methodOfMotivation.TypesNonFinancialMotivation.nameNonFinMotivation}}></td>
-      <td text={{methodOfMotivation.dateOfRecieving}}></td>
+    <tr *ngFor="let methodOfMotivationInvolved of methodsOfMotivationInvolved">
+      <td class="hidden">{{methodOfMotivationInvolved.id}}</td>
+      <td>{{methodOfMotivationInvolved.before}}</td>
+      <td>{{methodOfMotivationInvolved.after}}</td>
+      <td>`{{methodOfMotivationInvolved.Employees.surname}} + " " + {{methodOfMotivationInvolved.Employees.firstname}} + {{methodOfMotivationInvolved.Employees.patronymic}}`</td>
+      <td>`{{methodOfMotivationInvolved.HRManagers.HRSurname}} + " " + {{methodOfMotivationInvolved.HRManagers.HRFirstName}} + " " + {{methodOfMotivationInvolved.HRManagers.HRPatronymic}}`</td>
+      <td>{{methodOfMotivationInvolved.TypesFinancialMotivation.nameFinMotivation}}</td>
+      <td>{{methodOfMotivationInvolved.TypesNonFinancialMotivation.nameNonFinMotivation}}</td>
+      <td>{{methodOfMotivationInvolved.dateOfRecieving}}</td>
+      <td><button class="btn btn-danger" (click)="deleteMethodOfMotivationInvolved(methodOfMotivationInvolved)">Удалить метод мотивации</button></td>
     </tr>
     </tbody>
   </table>

@@ -7,16 +7,19 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MethodOfMotivationInvolvedComponent,
+    AddMethodOfMotivationInvolvedComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
-  Apartments
+  MethodOfMotivationInvolvedService
   ],
   bootstrap: [AppComponent]
 })
