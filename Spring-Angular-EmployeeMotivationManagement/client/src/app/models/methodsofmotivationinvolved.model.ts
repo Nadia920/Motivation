@@ -1,4 +1,4 @@
-export class MethodsOfMotivation {
+export class MethodsOfMotivationInvolved {
 id: Long;
 before: String;
 after: String;

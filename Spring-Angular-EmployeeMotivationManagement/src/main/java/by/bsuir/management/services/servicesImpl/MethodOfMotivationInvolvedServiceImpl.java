@@ -12,15 +12,15 @@ import java.util.List;
 @Service
 public class MethodOfMotivationInvolvedServiceImpl implements MethodOfMotivationInvolvedService {
     @Autowired
-    MethodOfMotivationInvolvedRepository methodOfMotivationInvolvedRepository;
+    private MethodOfMotivationInvolvedRepository methodOfMotivationInvolvedRepository;
     @Autowired
-    EmployeeService employeeService;
+    private EmployeeService employeeService;
     @Autowired
-    HRManagerService hrManagerService;
+    private HRManagerService hrManagerService;
     @Autowired
-    TypeNonFinancialMotivationService typeNonFinancialMotivationService;
+    private TypeNonFinancialMotivationService typeNonFinancialMotivationService;
     @Autowired
-    TypeFinancialMotivationService typeFinancialMotivationService;
+    private TypeFinancialMotivationService typeFinancialMotivationService;
 
 
     @Override

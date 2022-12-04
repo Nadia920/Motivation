@@ -872,3 +872,81 @@ Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
 2022-12-04 10:42:47,262 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-12-04 10:42:47,267 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
 2022-12-04 10:42:47,271 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-12-04 13:07:18,130 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Starting SpringAngularEmployeeMotivationManagementApplication using Java 17.0.1 on DESKTOP-HAT5OBJ with PID 12184 (D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement\target\classes started by kabak in D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement)
+2022-12-04 13:07:18,135 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : No active profile set, falling back to 1 default profile: "default"
+2022-12-04 13:07:18,214 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 13:07:19,725 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 13:07:19,874 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 15 JPA repository interfaces.
+2022-12-04 13:07:21,555 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-12-04 13:07:21,925 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-12-04 13:07:23,705 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:07:25,340 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-12-04 13:07:25,379 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Started SpringAngularEmployeeMotivationManagementApplication in 7.936 seconds (JVM running for 8.779)
+2022-12-04 13:07:25,394 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:07:25,399 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-12-04 13:07:25,406 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-12-04 13:08:11,091 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Starting SpringAngularEmployeeMotivationManagementApplication using Java 17.0.1 on DESKTOP-HAT5OBJ with PID 15096 (D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement\target\classes started by kabak in D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement)
+2022-12-04 13:08:11,092 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : No active profile set, falling back to 1 default profile: "default"
+2022-12-04 13:08:11,163 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 13:08:12,156 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 13:08:12,429 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 246 ms. Found 15 JPA repository interfaces.
+2022-12-04 13:08:14,002 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-12-04 13:08:14,128 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-12-04 13:08:15,443 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:08:17,177 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-12-04 13:08:17,234 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Started SpringAngularEmployeeMotivationManagementApplication in 6.757 seconds (JVM running for 7.453)
+2022-12-04 13:08:17,259 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:08:17,272 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-12-04 13:08:17,281 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-12-04 13:09:20,770 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Starting SpringAngularEmployeeMotivationManagementApplication using Java 17.0.1 on DESKTOP-HAT5OBJ with PID 7264 (D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement\target\classes started by kabak in D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement)
+2022-12-04 13:09:20,772 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : No active profile set, falling back to 1 default profile: "default"
+2022-12-04 13:09:20,886 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 13:09:22,043 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 13:09:22,325 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 261 ms. Found 15 JPA repository interfaces.
+2022-12-04 13:09:24,185 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-12-04 13:09:24,385 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-12-04 13:09:26,143 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:09:27,815 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-12-04 13:09:27,883 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Started SpringAngularEmployeeMotivationManagementApplication in 8.031 seconds (JVM running for 8.959)
+2022-12-04 13:09:27,919 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:09:27,926 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-12-04 13:09:27,936 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-12-04 13:23:51,805 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Starting SpringAngularEmployeeMotivationManagementApplication using Java 17.0.1 on DESKTOP-HAT5OBJ with PID 12660 (D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement\target\classes started by kabak in D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement)
+2022-12-04 13:23:51,903 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : No active profile set, falling back to 1 default profile: "default"
+2022-12-04 13:23:51,988 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 13:23:53,518 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 13:23:53,745 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 15 JPA repository interfaces.
+2022-12-04 13:23:55,483 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-12-04 13:23:55,644 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-12-04 13:23:57,342 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:23:59,050 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-12-04 13:23:59,102 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Started SpringAngularEmployeeMotivationManagementApplication in 8.403 seconds (JVM running for 9.503)
+2022-12-04 13:23:59,131 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:23:59,137 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-12-04 13:23:59,143 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-12-04 13:59:41,788 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Starting SpringAngularEmployeeMotivationManagementApplication using Java 17.0.1 on DESKTOP-HAT5OBJ with PID 16168 (D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement\target\classes started by kabak in D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement)
+2022-12-04 13:59:41,791 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : No active profile set, falling back to 1 default profile: "default"
+2022-12-04 13:59:41,886 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 13:59:45,582 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 13:59:45,743 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 15 JPA repository interfaces.
+2022-12-04 13:59:47,081 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-12-04 13:59:47,250 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-12-04 13:59:49,901 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:59:51,303 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-12-04 13:59:51,333 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Started SpringAngularEmployeeMotivationManagementApplication in 10.374 seconds (JVM running for 11.958)
+2022-12-04 13:59:51,349 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 13:59:51,354 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-12-04 13:59:51,357 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-12-04 14:00:02,894 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Starting SpringAngularEmployeeMotivationManagementApplication using Java 17.0.1 on DESKTOP-HAT5OBJ with PID 17216 (D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement\target\classes started by kabak in D:\документы\GitHub\Motivation\Spring-Angular-EmployeeMotivationManagement)
+2022-12-04 14:00:02,897 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : No active profile set, falling back to 1 default profile: "default"
+2022-12-04 14:00:02,986 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 14:00:03,891 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 14:00:04,162 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 245 ms. Found 15 JPA repository interfaces.
+2022-12-04 14:00:05,794 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-12-04 14:00:05,926 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-12-04 14:00:07,950 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 14:00:09,908 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-12-04 14:00:09,968 INFO  [restartedMain] by.bsuir.management.SpringAngularEmployeeMotivationManagementApplication : Started SpringAngularEmployeeMotivationManagementApplication in 8.417 seconds (JVM running for 9.51)
+2022-12-04 14:00:09,989 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 14:00:09,994 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-12-04 14:00:09,999 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.

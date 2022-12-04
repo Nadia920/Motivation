@@ -9,7 +9,7 @@ const httpOptions = {
 };
 
 @Injectable()
-export class MethodOfMotivationInvolvedService {
+export interface MethodOfMotivationInvolvedService {
 
   constructor(private http:HttpClient) {}
 

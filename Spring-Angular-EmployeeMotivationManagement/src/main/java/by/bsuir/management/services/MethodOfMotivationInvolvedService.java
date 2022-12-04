@@ -1,4 +1,4 @@
-package by.bsuir.management.services;
+/*package by.bsuir.management.services;
 
 import by.bsuir.management.models.MethodOfMotivationInvolved;
 
@@ -9,5 +9,5 @@ public interface MethodOfMotivationInvolvedService {
     List<MethodOfMotivationInvolved> findAll();
     boolean save(MethodOfMotivationInvolved obj);
     List<MethodOfMotivationInvolved> getMethodsByEmployeeId(Long id);
-}
+}*/
 

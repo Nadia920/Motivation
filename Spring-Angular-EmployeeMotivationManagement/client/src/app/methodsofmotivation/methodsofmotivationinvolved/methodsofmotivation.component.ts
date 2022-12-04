@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MethodsOfMotivationInvolved} from '..//models/user.model';
-import { MethodsOfMotivationInvolvedService } from './user.service';
+import { MethodsOfMotivationInvolved} from '../../models/methodofmotivationinvolved.model';
+import { MethodsOfMotivationInvolvedService } from '../methodsofmotivationinvolved.service';
 
 @Component({
   selector: 'app-methodofmotivationinvolved',

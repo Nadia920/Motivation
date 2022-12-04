@@ -32,8 +32,8 @@ public class HRManager extends BaseEntity{
     @Column(name = "HR_position", length = 15)
     private String HRPosition;
     @NotNull
-    @Column(name = "HR_ responsibilities", length = 15)
-    private String HReRsponsibilities;
+    @Column(name = "HR_responsibilities", length = 15)
+    private String HReResponsibilities;
     @OneToMany(mappedBy = "hrManager", fetch = FetchType.EAGER)
     private Set<MethodOfMotivationInvolved> methodOfMotivationInvolved;
 }
