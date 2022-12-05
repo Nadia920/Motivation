@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MethodOfMotivationInvolved} from '..//models/user.model';
-import { MethodOfMotivationInvolvedService } from './user.service';
+import { MethodOfMotivationInvolved} from '../../models/methodofmotivationinvolved.model';
+import { MethodOfMotivationInvolvedService } from '../methodofmotivationinvolved.service';
 
 @Component({
   selector: 'app-addmethodsofmotivation',
@@ -17,10 +17,10 @@ export class AddMethodsOfMotivationComponent {
 
    }
 
-   createUser(): void {
-     this.methodOfMotivationInvolvedService.createUser(this.methodOfMotivationInvolved)
+   create(): void {
+     this.methodOfMotivationInvolvedService.create(this.methodOfMotivationInvolved)
          .subscribe( data => {
-           alert("User created successfully.");
+           alert("Methods created successfully.");
          });
 
    };

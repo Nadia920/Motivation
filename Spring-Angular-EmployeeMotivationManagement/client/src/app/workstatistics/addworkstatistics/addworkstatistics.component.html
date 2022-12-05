@@ -1,0 +1,30 @@
+<div class="col-md-6">
+  <h2 class="text-center">Введите информацию о работе</h2>
+  <form>
+    <div class="form-group col-md-8">
+      <h2>Имя сотрудника</h2>
+      <select class="form-control col-lg-auto mb-3" id="select1" name="" required>
+        <optgroup  *ngFor="let employee of employees" >
+          <option value="${employee.id}" text="${employee.surname} + ${employee.firstname} + ${employee.patronymic}"></option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="numberOfHoursWorked" class="col-form-label">До</label>
+      <input type="text" [(ngModel)]="workstatistics.numberOfHoursWorked" name="numberOfHoursWorked" class="form-control"
+             id="numberOfHoursWorked" placeholder="До" autofocus required/>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="overtime" class="col-form-label">После</label>
+      <input type="text" [(ngModel)]="workstatistics.overtime" name="overtime" class="form-control"
+             id="overtime" placeholder="После" autofocus required/>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="numberOfClosedProjects" class="col-form-label">После</label>
+      <input type="text" [(ngModel)]=workstatistics.numberOfClosedProjects" name="numberOfClosedProjects" class="form-control"
+             id="numberOfClosedProjects" placeholder="После" autofocus required/>
+    </div>
+    <button class="btn btn-success" (click)="create()">Добавить</button>
+  </form>
+</div>
+

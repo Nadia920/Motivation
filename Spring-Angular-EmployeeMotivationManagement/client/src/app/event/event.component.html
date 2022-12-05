@@ -10,14 +10,15 @@
     </tr>
     </thead>
     <tbody>
-    <tr each="event : ${events}">
-      <td text="${event.eventName}"></td>
-      <td text="${event.descriptionOfTheEvent}"></td>
-      <td text="${event.dateOfTheEvent}"></td>
-      <td text="${event.programOfTheEvent}"></td>
-      <td text="${event.budget}"></td>
+    <tr *ngFor="let event of events">
+      <td>{{event.eventName}}</td>
+      <td>{{event.descriptionOfTheEvent}}</td>
+      <td>{{event.dateOfTheEvent}}</td>
+      <td>{{event.programOfTheEvent}}</td>
+      <td>{{event.budget}}</td>
+      <td><button class="btn btn-danger" (click)="delete(event)">Удалить</button></td>
     </tr>
     </tbody>
   </table>
-  <button href="/Admin/addEvent">Добавить</button>
+  <button routerLink="/Admin/addEvent">Добавить</button>
 </div>

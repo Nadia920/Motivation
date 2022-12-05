@@ -2,17 +2,19 @@
   <table class="table table-hover" style="margin-left: -5px">
     <thead>
     <tr>
-      <th text=""></th>
-      <th text="}"></th>
-      <th text=""></th>
+      <th>Сотрудник</th>
+      <th>Проступок</th>
+      <th>Наказание</th>
     </tr>
     </thead>
     <tbody>
-    <tr each="punishment : ${punishments}">
-      <td text="${punishment.Employees.surname} + ${statistics.Employees.firstName} + ${statistics.Employees.patronymic}"></td>
-      <td text="${punishment.misconduct}"></td>
-      <td text="${punishment.judgment}"></td>
+    <tr *ngFor="let punishment of punishments">
+      <td>{{punishment.Employees.surname}} + " " + {{statistics.Employees.firstName}} + " " + {{statistics.Employees.patronymic}}</td>
+      <td>{{punishment.misconduct}}</td>
+      <td>{{punishment.judgment}}</td>
+      <td><button class="btn btn-danger" (click)="delete(punishment)">Удалить</button></td>
     </tr>
     </tbody>
   </table>
+  <a routerLink="/Admin/addPunishment"><button>Добавить</button></a>
 </div>

@@ -18,14 +18,14 @@ export class MethodsofmotivationinvolvedComponent implements OnInit{
     }
 
   ngOnInit() {
-      this.methodsOfMotivationInvolvedService.getMethods()
+      this.methodsOfMotivationInvolvedService.get()
         .subscribe( data => {
           this.methodsOfMotivationInvolved = data;
         });
     };
 
     deleteUser(methodOfMotivationInvolved: MethodOfMotivationInvolved): void {
-      this.methodsOfMotivationInvolvedService.deleteMethodsOfMotivationInvolved(methodsOfMotivationInvolved)
+      this.methodsOfMotivationInvolvedService.delete(methodsOfMotivationInvolved)
         .subscribe( data => {
           this.methodsOfMotivationInvolved = this.methodsOfMotivationInvolved.filter(m => m !== methodOfMotivationInvolved);
         })

@@ -1,0 +1,21 @@
+<div>
+  <table class="table table-hover" style="margin-left: -5px">
+    <thead>
+    <tr>
+      <th>Количество отработанных часов</th>
+      <th>Количество часов сверх</th>
+      <th>Количество закрытых проектов</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let workStatistics of worksStatistics">
+      <td class="hidden">{{workStatistics.id}}</td>
+      <td>{{workStatistics.Employees.surname}} + " " + {{workStatistics.Employees.firstName}} + " " + {{workStatistics.Employees.patronymic}}</td>
+      <td>{{workStatistics.numberOfHoursWorked}}</td>
+      <td>{{workStatistics.overtime}}</td>
+      <td>{{workStatistics.numberOfClosedProjects}}</td>
+      <td><button class="btn btn-danger" (click)="delete(workStatistics)">Удалить</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

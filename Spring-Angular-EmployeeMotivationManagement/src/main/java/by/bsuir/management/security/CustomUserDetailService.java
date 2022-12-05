@@ -20,11 +20,13 @@ public class CustomUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        Optional<Employee> optionalUser = employeeService.findByLogin(login);
+        /*Optional<Employee> optionalUser = employeeService.findByLogin(login);
 
         optionalUser
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found"));
         return optionalUser
-                .map(CustomUserDetail::new).get();
+                .map(CustomUserDetail::new).get();*/
+
+        return null;
     }
 }

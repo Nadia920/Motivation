@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MethodOfMotivationInvolvedComponent } from './methodofmotivationinvolved/methodofmotivationinvolved.component';
-import {AddMethodOfMotivationInvolvedComponent} from './methodofmotivationinvolved/add-methodofmotivationinvolved.component';
+import { WorkStatisticsComponent } from './workstatistics/workstatistics.component';
+import { AddWorkStatisticsComponent } from './workstatistics/addworkstatistics/addworkstatistics.component';
+import { MethodOfMotivationInvolvedComponent } from './methodsofmotivation/methodsofmotivationinvolved/methodsofmotivation.component';
+import { AddMethodOfMotivationInvolvedComponent} from './methodsofmotivation/addmethodsofmotivationinvolved/addmethodsofmotivation.component';
+import { PunishmentComponent } from './punishment/punishment.component';
+import { AddPunishmentComponent } from './punishment/addpunishment/addpunishment.component';
 
 const routes: Routes = [
-  { path: 'methodsOfMotivationInvolvedComponent', component: MethodOfMotivationInvolvedComponent },
-  { path: 'addMethodOfMotivationInvolvedComponent', component: AddMethodOfMotivationInvolvedComponent }
+  { path: '/methodsOfMotivationInvolvedComponent', component: MethodOfMotivationInvolvedComponent },
+  { path: '/addMethodOfMotivationInvolvedComponent', component: AddMethodOfMotivationInvolvedComponent }
+  { path: '/employeePerformanceAnalysis', component: WorkStatisticsComponent }
+  { path: '/addWorkStatistics', component: AddWorkStatisticsComponent }
+  { path: '/punishment', component: PunishmentComponent }
+  { path: '/addPunishment', component: AddPunishmentComponent }
 ];
 
 @NgModule({

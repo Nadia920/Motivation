@@ -16,10 +16,10 @@ import javax.validation.constraints.NotNull;
 public class Punishment extends BaseEntity{
     @NotNull
     @Column(name = "misconduct", length = 15)
-    private int misconduct;
+    private String misconduct;
     @NotNull
     @Column(name = "judgment", length = 15)
-    private int judgment;
+    private String judgment;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id")
     private Employee employee;

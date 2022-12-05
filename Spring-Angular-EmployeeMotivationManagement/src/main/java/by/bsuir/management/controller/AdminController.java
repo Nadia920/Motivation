@@ -62,9 +62,21 @@ public class AdminController {
         return (List) workStatisticService.findAll();
     }
 
-    @GetMapping(path = {"/methodsMotivation"})
+    @GetMapping(path = {"/methodsOfMotivationInvolvedComponent"})
     public List methodsMotivation(Model model){
         return (List)  methodOfMotivationInvolvedService.findAll();
+    }
+
+    @GetMapping(path = {"/addMethodOfMotivationInvolvedComponent"})
+    public void addMethodsOfMotivation(Model model){
+        List<Employee> employessList = employeeService.findAll();
+        model.addAttribute("employees", employessList.size() != 0 ? employessList : null);
+        List<HRManager> hrManagerList = hrManagerService.findAll();
+        model.addAttribute("hrManagers", hrManagerList.size() != 0 ? hrManagerList : null);
+        List<TypeFinancialMotivation> typeFinancialMotivationList = typeFinancialMotivationService.findALL();
+        model.addAttribute("typesFinancialMotivation", typeFinancialMotivationList.size() != 0 ? typeFinancialMotivationList : null);
+        List<TypeNonFinancialMotivation> typeNonFinancialMotivationList = typeNonFinancialMotivationService.findALL();
+        model.addAttribute("typesFinancialMotivation", typeNonFinancialMotivationList.size() != 0 ? typeNonFinancialMotivationList : null);
     }
 
     @GetMapping(path = {"/punishment"})
@@ -113,18 +125,7 @@ public class AdminController {
         eventService.save(obj);
     }*/
 
-    @GetMapping(path = {"/addMethodsOfMotivation"})
-    public String addMethodsOfMotivation(Model model){
-        List<Employee> employessList = employeeService.findAll();
-        model.addAttribute("employes", employessList.size() != 0 ? employessList : null);
-        List<HRManager> hrManagerList = hrManagerService.findAll();
-        model.addAttribute("hrManagers", hrManagerList.size() != 0 ? hrManagerList : null);
-        List<TypeFinancialMotivation> typeFinancialMotivationList = typeFinancialMotivationService.findALL();
-        model.addAttribute("typesFinancialMotivation", typeFinancialMotivationList.size() != 0 ? typeFinancialMotivationList : null);
-        List<TypeNonFinancialMotivation> typeNonFinancialMotivationList = typeNonFinancialMotivationService.findALL();
-        model.addAttribute("typesFinancialMotivation", typeNonFinancialMotivationList.size() != 0 ? typeNonFinancialMotivationList : null);
-        return "/addMethodsOfMotivation";
-    }
+
     @PostMapping(path = {"/saveMethods"})
     public void saveMethods(@RequestBody MethodOfMotivationInvolved obj, Model model) {
         methodOfMotivationInvolvedService.save(obj);
