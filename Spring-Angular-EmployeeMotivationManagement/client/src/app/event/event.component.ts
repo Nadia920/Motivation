@@ -14,7 +14,7 @@ export class EventComponent implements OnInit{
 
   constructor(private router: Router, private eventService: EventService) {
 
-    }
+   }
 
   ngOnInit() {
       this.eventService.get()

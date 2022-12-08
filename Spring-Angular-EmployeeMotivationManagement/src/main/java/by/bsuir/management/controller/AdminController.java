@@ -111,23 +111,19 @@ public class AdminController {
         return (List) shareService.findAll();
     }
 
-    /*@GetMapping(path = {"/event"})
-    public List event(Model model){
-        return (List) eventService.findAll();
-    }*/
+
 
     @GetMapping(path = {"/addEvent"})
     public String addEvent(Model model) {
         return "/addEvent";
     }
-   /* @PostMapping(path = {"/saveMethods"})
-    public void saveEvent(@RequestBody Event obj, Model model){
-        eventService.save(obj);
-    }*/
 
 
     @PostMapping(path = {"/saveMethods"})
     public void saveMethods(@RequestBody MethodOfMotivationInvolved obj, Model model) {
         methodOfMotivationInvolvedService.save(obj);
     }
+
+
+
 }

@@ -7,12 +7,12 @@
     </tr>
     </thead>
     <tbody>
-    <tr each="promotion : ${promotions}">
-      <td text="${promotion.titleOfThePosition}"></td>
-      <td text="${promotion.numberOfPointsRequired}"></td>
+    <tr *ngFor="let promotion of promotions">
+      <td>{{promotion.titleOfThePosition}}</td>
+      <td>{{promotion.numberOfPointsRequired}}</td>
     </tr>
     </tbody>
   </table>
   <h3>Твоё количество баллов</h3>
-  <input value=${employee}/>
+  <input value={{employee}} />
 </div>

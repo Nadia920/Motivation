@@ -8,16 +8,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let workStatistics of worksStatistics">
-      <td class="hidden">{{workStatistics.id}}</td>
+    <tr>
+      <td class="hidden">{{yourWorkStatistics.id}}</td>
       <td>{{workStatistics.Employees.surname}} + " " + {{workStatistics.Employees.firstName}} + " " + {{workStatistics.Employees.patronymic}}</td>
       <td>{{workStatistics.numberOfHoursWorked}}</td>
       <td>{{workStatistics.overtime}}</td>
       <td>{{workStatistics.numberOfClosedProjects}}</td>
       <td><button class="btn btn-danger" (click)="delete(workStatistics)">Удалить</button></td>
     </tr>
-    <button onclick="DescOvertime">Сортировать по убыванию переработки</button>
-    <button onclick="AscOvertime">Сортировать по возрастанию переработки</button>
     </tbody>
   </table>
 </div>
