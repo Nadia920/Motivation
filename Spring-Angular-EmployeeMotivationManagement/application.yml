@@ -8,34 +8,46 @@ server:
 ---
 #JPA PROPERTIES
 spring:
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:file:~/test
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+#spring:
+#jpa:
+#database: H2
+#show-sql: true
+#hibernate:
     #ddl-auto: validate
     #create-drop
 ---
 #DATABASE
-spring:
-  datasource:
-    platform: postgres
+#spring:
+#datasource:
+#platform: h2
     #   For Docker
     #    url: jdbc:postgresql://localhost:5432/motivation
     #    For Local host
-    url: jdbc:postgresql://localhost:5432/motivation
-    username: postgres
-    password: 1111
-    driverClassName: org.postgresql.Driver
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate.dialect: org.hibernate.dialect.PostgreSQL14Dialect.
-
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    database: POSTGRESQL
-  database:
-    driverClassName: org.postgresql.Driver
+    #url: jdbc:h2:tcp://localhost:9092/mem:motivation
+    #user: sa
+    #password:
+    #driverClassName: org.postgresql.Driver
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
+    #hibernate.dialect: org.hibernate.dialect.PostgreSQL14Dialect.
+#url: jdbc:h2:tcp://localhost:9092/mem:motivation
+#user: sa
+#password:
+    #jpa:
+    #show-sql: true
+      #hibernate:
+    #ddl-auto: update
+    #database: H2
+    #database:
+    #driverClassName: org.h2.Driver
 ---
 #Log4j
 

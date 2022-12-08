@@ -16,7 +16,7 @@ import java.util.Date;
 @DynamicUpdate
 public class MethodOfMotivationInvolved extends BaseEntity{
     @NotNull
-    @Column(name = "before", length = 15)
+    @Column(name = "beforeM", length = 15)
     private String before;
     @NotNull
     @Column(name = "after", length = 15)
