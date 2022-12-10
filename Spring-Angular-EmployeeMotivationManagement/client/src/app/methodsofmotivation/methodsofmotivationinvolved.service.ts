@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { MethodOfMotivationInvolved } from '../models/methodsofmotivationinvolved.model';
+import { MethodOfMotivationInvolved } from '../models/methodofmotivationinvolved.model';
 
 
 const httpOptions = {

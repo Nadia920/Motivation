@@ -1,4 +1,4 @@
-import { User } from 'src/app/user/user.model';
+import { User } from './models/employee.model';
 import * as forRoot from '../../state/app-state'
 import * as AuthActions from './auth.actions';
 import { State } from '@ngrx/store';

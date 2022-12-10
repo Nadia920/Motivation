@@ -1,28 +1,29 @@
 import { Component } from '@angular/core';
+import { CareerLadder } from './models/careerladder.model';
 
 @Component({
   selector: 'app-careerladder',
   templateUrl: './careerladder.component.html',
   styleUrls: ['./careerladder.component.scss']
 })
-export class CareerladderComponent implements OnInit{
-     careerladders: Careerladder[];
+export class CareerLadderComponent implements OnInit{
+     careerLadders: CareerLadder[];
 
-     constructor(private router: Router, private careerladderService: CareerladderService) {
+     constructor(private router: Router, private careerLadderService: CareerLadderService) {
 
        }
 
      ngOnInit() {
-         this.careerladderService.get()
+         this.careerLadderService.get()
            .subscribe( data => {
              this.events = data;
            });
        };
 
-       delete(careerladder: Careerladder): void {
-         this.careerladderService.delete(event)
+       delete(careerLadder: CareerLadder): void {
+         this.careerLadderService.delete(event)
            .subscribe( data => {
-             this.careerladders = this.careerladders.filter(c => c !== careerladder);
+             this.careerLadders = this.careerLadders.filter(c => c !== careerLadder);
            })
        };
 

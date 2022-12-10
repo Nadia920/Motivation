@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { WorkStatistics } from '../models/workstatistics.model';
-import { WorkStatisticsService } from '/workstatistics.service';
+import { YourWorkStatisticsService } from 'yourworkstatistics.service';
 
 @Component({
   selector: 'app-worktatistics',
   templateUrl: './yourworktatistics.component.html',
   styleUrls: ['./worktatistics.component.scss']
 })
-export class WorkStatisticsComponent implements OnInit{
+export class YourWorkStatisticsComponent implements OnInit{
 
    worksStatistics: WorkStatistics[];
 

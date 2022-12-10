@@ -11,7 +11,7 @@ public interface EmployeeService {
 
     boolean save(Employee client, String role_user);
 
-    /*Optional<Employee> findByLogin(String login);*/
+    Optional<Employee> findByLogin(String login);
 
     int findNumberOfPointsById(Long id);
 

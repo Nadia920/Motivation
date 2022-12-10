@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './addevent.component.html',
   styleUrls: ['./addevent.component.scss']
 })
-export class AddeventComponent {
+export class AddEventComponent {
 
 }

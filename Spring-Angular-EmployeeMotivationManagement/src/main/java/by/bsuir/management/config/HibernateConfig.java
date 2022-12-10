@@ -1,4 +1,4 @@
-/*package by.bsuir.management.config;
+package by.bsuir.management.config;
 
 import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -52,9 +52,9 @@ public class HibernateConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.java.incident.model");
+        sessionFactory.setPackagesToScan("by.bsuir.management.models");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }
 
-}*/
+}

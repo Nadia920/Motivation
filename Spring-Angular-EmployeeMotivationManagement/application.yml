@@ -10,28 +10,29 @@ server:
 spring:
   jpa:
     database: POSTGRESQL
-    show-sql: true
+    show-sql: false
     hibernate:
-    ddl-auto: create
-    #create-drop
+      #ddl-auto: validate
+      #create-drop
 ---
 #DATABASE
 spring:
   datasource:
     platform: postgres
     #   For Docker
-    #    url: jdbc:postgresql://localhost:5432/motivation
+    #    url: jdbc:postgresql://localhost:5432/Travel-Agency-db
     #    For Local host
-    url: jdbc:h2:mem:test
-    username: sa
-    password: password
-    driverClassName: org.h2.Driver
-    database-platform: org.hibernate.dialect.H2Dialect
+    url: jdbc:postgresql://localhost:5432/motivation
+    username: postgres
+    password: 1111
+    driverClassName: org.postgresql.Driver
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.dialect: org.hibernate.dialect.PostgreSQL14Dialect.
 
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     database: POSTGRESQL
   database:
     driverClassName: org.postgresql.Driver

@@ -60,10 +60,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         return true;
     }
 
-    /*@Override
+    @Override
     public Optional<Employee> findByLogin(String login) {
         return Optional.ofNullable(employeeRepository.findByLogin(login));
-    }*/
+    }
 
     @Override
     public int findNumberOfPointsById(Long id) {

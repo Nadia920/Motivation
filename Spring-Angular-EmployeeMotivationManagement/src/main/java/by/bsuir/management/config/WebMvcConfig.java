@@ -1,4 +1,4 @@
-/*package by.bsuir.management.config;
+package by.bsuir.management.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -45,4 +45,4 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
                 .addResourceLocations("classpath:/static/");
     }
 
-}*/
+}

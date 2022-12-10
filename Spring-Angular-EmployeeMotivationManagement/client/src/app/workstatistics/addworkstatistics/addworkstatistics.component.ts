@@ -6,10 +6,10 @@ import { WorkStatisticsService } from '../workstatistics.service';
 
 @Component({
   selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+  templateUrl: './addworkstatistics.component.html',
+  styleUrls: ['./addworkstatistics.component.scss']
 })
-export class WorkStatisticsComponent {
+export class AddWorkStatisticsComponent {
    workStatistics: WorkStatistics = new WorkStatistics();
 
    constructor(private router: Router, private workStatisticsService: WorkStatisticsService) {
@@ -17,7 +17,7 @@ export class WorkStatisticsComponent {
    }
 
    create(): void {
-     this.workStatisticsService.createWorkStatistics(this.workStatistics)
+     this.workStatisticsService.create(this.workStatistics)
          .subscribe( data => {
            alert("workStatistics created successfully.");
          });

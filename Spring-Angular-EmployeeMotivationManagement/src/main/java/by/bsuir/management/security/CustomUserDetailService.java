@@ -1,5 +1,6 @@
 package by.bsuir.management.security;
 
+
 import by.bsuir.management.models.Employee;
 import by.bsuir.management.services.EmployeeService;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,13 +21,11 @@ public class CustomUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        /*Optional<Employee> optionalUser = employeeService.findByLogin(login);
+        Optional<Employee> optionalUser = employeeService.findByLogin(login);
 
         optionalUser
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found"));
         return optionalUser
-                .map(CustomUserDetail::new).get();*/
-
-        return null;
+                .map(CustomUserDetail::new).get();
     }
 }

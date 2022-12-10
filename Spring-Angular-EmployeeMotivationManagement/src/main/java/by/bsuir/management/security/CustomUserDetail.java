@@ -9,8 +9,8 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class CustomUserDetail extends Employee implements UserDetails {
-    public CustomUserDetail(final Employee employee) {
-        super(employee);
+    public CustomUserDetail(final Employee user) {
+        super(user);
     }
 
     @Override
@@ -57,4 +57,3 @@ public class CustomUserDetail extends Employee implements UserDetails {
         return true;
     }
 }
-

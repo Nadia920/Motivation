@@ -1,4 +1,4 @@
-/*package by.bsuir.management.config;
+package by.bsuir.management.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -19,4 +19,3 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
         return new String[]{"/"};
     }
 }
-*/

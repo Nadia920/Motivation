@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddmethodsofmotivationComponent } from './addmethodsofmotivation.component';
+import { AddMethodsOfMotivationInvolvedComponent } from './addmethodsofmotivation.component';
 
-describe('AddmethodsofmotivationComponent', () => {
-  let component: AddmethodsofmotivationComponent;
-  let fixture: ComponentFixture<AddmethodsofmotivationComponent>;
+describe('AddMethodsOfMotivationInvolvedComponent', () => {
+  let component: AddMethodsOfMotivationInvolvedComponent;
+  let fixture: ComponentFixture<AddMethodsOfMotivationInvolvedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddmethodsofmotivationComponent ]
+      declarations: [ AddMethodsOfMotivationInvolvedComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddmethodsofmotivationComponent);
+    fixture = TestBed.createComponent(AddMethodsOfMotivationInvolvedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
